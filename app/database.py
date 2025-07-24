@@ -2,6 +2,11 @@ import os
 import hvac
 import motor.motor_asyncio
 
+from dotenv import load_dotenv
+
+# Load .env file.. 
+load_dotenv()
+
 # Get Vault details from environment
 vault_addr = os.getenv("VAULT_ADDR")
 role_id = os.getenv("VAULT_ROLE_ID")
