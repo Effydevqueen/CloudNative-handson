@@ -1,0 +1,20 @@
+replicaCount: 3
+
+image:
+  repository: elizabeth479/student-tracker
+  pullPolicy: IfNotPresent
+  tag: "latest"
+
+service:
+  type: ClusterIP
+  port: 8000
+
+ingress:
+  enabled: true
+  className: nginx
+  hosts:
+    - host: studenttracker.local
+      paths:
+        - path: /
+          pathType: Prefix
+
