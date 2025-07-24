@@ -1,0 +1,2 @@
+helm list -n <namespace>
+helm status <release-name> -n <namespace>
